@@ -40,9 +40,12 @@ module.exports = [{
         const inventory = request.payload.inventoryData;
         const inItemArray = objectToArray(inventory);
         Models.items.bulkUpsert(inItemArray).then(() => {
-          response({
-            valid: true,
-            inventoryUpdated: true,
+          Models.orders.createOrder(itemArray).then(() => {
+            response({
+              valid: true,
+              inventoryUpdated: true,
+              orderCreated: true,
+            });
           });
         });
       } else {
