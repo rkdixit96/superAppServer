@@ -1,20 +1,20 @@
 {
   "development": {
-    "username": "root",
+    "username": "krishnardixit",
     "password": null,
-    "database": "database_development",
+    "database": "shopdb",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "postgres"
   },
   "test": {
-    "username": "root",
+    "username": "krishnardixit",
     "password": null,
-    "database": "database_test",
+    "database": "shopdb",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "postgres"
   },
   "production": {
-    "username": "root",
+    "username": "krishnardixit",
     "password": null,
     "database": "database_production",
     "host": "127.0.0.1",
