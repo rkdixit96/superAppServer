@@ -1,3 +1,3 @@
-const TestRoute = require('./testRoute');
+const Inventory = require('./inventory');
 
-module.exports = [].concat(TestRoute);
+module.exports = [].concat(Inventory);

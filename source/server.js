@@ -8,7 +8,6 @@ server.connection({
   host: 'localhost',
 });
 
-console.log(Routes, 'ROUTES');
 server.route(Routes);
 
 if (!module.parent) {

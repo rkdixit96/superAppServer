@@ -1,6 +1,6 @@
 module.exports = [{
   method: 'GET',
-  path: '/',
+  path: '/inventory',
   handler: (request, response) => {
     response('Hello');
   },
