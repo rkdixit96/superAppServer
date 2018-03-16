@@ -11,11 +11,21 @@ const validateOrder = (itemArray) => {
   return Promise.all(promiseArray);
 };
 
+// const objectToArray = (object) => {
+//   const keys = Object.keys(object);
+//   let result = [];
+//   keys.forEach((key) => {
+//     result = result.concat(object[key][0]);
+//   });
+//   return result;
+// };
 const objectToArray = (object) => {
   const keys = Object.keys(object);
   let result = [];
   keys.forEach((key) => {
-    result = result.concat(object[key][0]);
+    object[key].forEach((item) => {
+      result = result.concat(item);
+    });
   });
   return result;
 };
@@ -57,6 +67,20 @@ module.exports = [{
     // Validate order
     // Update inventory
     // Create order entry
+  },
+},
+{
+  method: 'GET',
+  path: '/orders',
+  handler: (request, response) => {
+    Models.orders.findAll({
+      order: [['createdAt', 'DESC']],
+      limit: 10,
+    }).then((orders) => {
+      response({
+        orders,
+      });
+    });
   },
 }];
 

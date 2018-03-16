@@ -1,4 +1,4 @@
 const Inventory = require('./inventory');
-const Checkout = require('./checkout');
+const Orders = require('./orders');
 
-module.exports = [].concat(Inventory, Checkout);
+module.exports = [].concat(Inventory, Orders);
